@@ -18,6 +18,14 @@
 https://github.com/fujingzhai/agent-skills/tree/main/yt-dlp
 ```
 
+对方如果是让 agent 安装，直接把下面这段话连同链接一起发给他的 agent 即可：
+
+```text
+请安装这个 skill：https://github.com/fujingzhai/agent-skills/tree/main/yt-dlp
+只安装其中的 yt-dlp 子目录（复制该文件夹到你的 skills 目录），不要安装仓库里的其他内容。
+装好后先运行 yt check 检查依赖，缺什么按输出提示安装。
+```
+
 对方获取该单个技能的方法（任选其一）：
 
 - 在 GitHub 打开上面的子目录链接，点右上角 **Code → Download ZIP**，解压后只把里面的 `yt-dlp/` 文件夹复制到自己的 skills 目录；
