@@ -131,7 +131,7 @@ def _span_info(token: str):
     color = None
     cm = re.search(r"color:\s*(#[0-9A-Fa-f]{6}|[A-Za-z]+)", token)
     if cm:
-        color = cm.group(1)
+        color = cm.group(1).lstrip("#")
     memo = None
     mm = re.search(r"data-inline-memo-content=\"([^\"]*)\"", token)
     if mm:
