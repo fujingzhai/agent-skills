@@ -8,18 +8,22 @@
 |---|---|
 | [yt-dlp](yt-dlp/SKILL.md) | YouTube / B站视频文稿整理：探测来源 → 下载最佳字幕 → 清洗校错 → 翻译 → 导出 DOCX |
 
-## 安装
+## 安装（按技能单独安装，不必整库安装）
 
-把仓库 clone 下来后，将 `yt-dlp/` 整个目录复制到你的 agent 所识别的 skills 目录即可。
-不同 agent 的 skills 目录不同，例如：
+每个技能都是自包含目录。**你只需要其中一个技能时，只取那个文件夹即可，不需要 clone 整个仓库。**
 
-- Claude Code：`~/.claude/skills/`（或项目 `.claude/skills/`）
-- 其他支持 SKILL.md 的 agent：按其文档指定的 skills 目录
-- 任何 agent：只要能读到本仓库，直接按 `yt-dlp/SKILL.md` 中的路径规则调用脚本也能用
+分享单个技能给他人时，直接发对应的子目录链接，例如：
 
-```bash
-git clone https://github.com/fujingzhai/agent-skills.git
+```text
+https://github.com/fujingzhai/agent-skills/tree/main/yt-dlp
 ```
+
+对方获取该单个技能的方法（任选其一）：
+
+- 在 GitHub 打开上面的子目录链接，点右上角 **Code → Download ZIP**，解压后只把里面的 `yt-dlp/` 文件夹复制到自己的 skills 目录；
+- 或者 `git clone https://github.com/fujingzhai/agent-skills.git` 后，只复制自己需要的那个子目录（整个仓库很轻量）。
+
+复制出来的技能目录放到你的 agent 所识别的 skills 目录（不同 agent 目录不同，按其文档说明，常见的如 `~/.claude/skills/` 或项目内 `.claude/skills/`）。任何 agent 只要能读到该目录，按其中的 `SKILL.md` 调用脚本即可，不依赖特定平台。
 
 ## 依赖
 
